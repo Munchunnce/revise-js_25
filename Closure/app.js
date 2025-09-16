@@ -1,9 +1,9 @@
 // Execution Context
-const username = 'Vimal';
+// const username = 'Vimal';
 
-function login() {
-    const password = 'secret';
-    console.log(`${username} is loging in using ${password}`);
-};
+// function login() {
+//     const password = 'secret';
+//     console.log(`${username} is loging in using ${password}`);
+// };
 
-login();
+// login();
