@@ -33,9 +33,18 @@
 
 // Function Currying
 
-function multiply(a, b) {
-    return a * b;
+// function multiply(a, b) {
+//     return a * b;
+// };
+
+// const doubleIt = multiply.bind(null, 2);
+// console.log(doubleIt(25));
+
+async function fetchData(baseUrl, endpoint){
+    const respnse = await fetch(`${baseUrl}${endpoint}`);
+    const data = respnse.json();
+    return data;
 };
 
-const doubleIt = multiply.bind(null, 2);
-console.log(doubleIt(25));
+const authService = fetchData.bind(null, 'http://authaervice.com');
+console.log(authService('/api/user'));
